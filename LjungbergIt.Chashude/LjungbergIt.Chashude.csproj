@@ -80,6 +80,7 @@
     <Compile Include="Xslt\XsltExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="xsl\LjungbergIt\MailChimpSignup.xslt" />
     <Content Include="xsl\sample rendering.xslt" />
   </ItemGroup>
   <PropertyGroup>
