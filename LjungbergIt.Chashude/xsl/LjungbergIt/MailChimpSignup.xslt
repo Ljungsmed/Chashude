@@ -22,8 +22,8 @@
   <xsl:param name="da_firstname" />
   <xsl:param name="en_lastname" />
   <xsl:param name="da_lastname" />
-  <xsl:param name="en_companyname" />
-  <xsl:param name="da_companyname" />
+  <xsl:param name="en_company" />
+  <xsl:param name="da_company" />
   <xsl:param name="en_email" />
   <xsl:param name="da_email" />
   <xsl:param name="en_signup" />
@@ -99,8 +99,8 @@
             <xsl:choose>
               <xsl:when test="$lang = 'en'">
                 <xsl:choose>
-                  <xsl:when test="$en_indicatesrequired != ''">
-                    <xsl:value-of select="translate($en_indicatesrequired, '+', ' ')"/>
+                  <xsl:when test="$en_email != ''">
+                    <xsl:value-of select="translate($en_email, '+', ' ')"/>
                     <span class="asterisk">*</span>
                   </xsl:when>
                   <xsl:otherwise>
@@ -110,8 +110,8 @@
               </xsl:when>
               <xsl:otherwise>
                 <xsl:choose>
-                  <xsl:when test="$da_indicatesrequired != ''">
-                    <xsl:value-of select="translate($en_indicatesrequired, '+', ' ')"/>
+                  <xsl:when test="$da_email != ''">
+                    <xsl:value-of select="translate($da_email, '+', ' ')"/>
                     <span class="asterisk">*</span>
                   </xsl:when>
                   <xsl:otherwise>
@@ -126,18 +126,95 @@
         </div>
         <div class="mc-field-group">
           <label for="mce-FNAME">
-            First Name  <span class="asterisk">*</span>
+            
+          <xsl:choose>
+              <xsl:when test="$lang = 'en'">
+                <xsl:choose>
+                  <xsl:when test="$en_firstname != ''">                    
+                    <xsl:value-of select="translate($en_firstname, '+', ' ')"/>
+                    <span class="asterisk">*</span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    First Name  <span class="asterisk">*</span>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:choose>
+                  <xsl:when test="$da_firstname != ''">
+                    <xsl:value-of select="translate($da_firstname, '+', ' ')"/>
+                    <span class="asterisk">*</span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    Fornavn  <span class="asterisk">*</span>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:otherwise>
+            </xsl:choose>
+          
           </label>
           <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" />
         </div>
         <div class="mc-field-group">
           <label for="mce-LNAME">
-            Last Name  <span class="asterisk">*</span>
+            
+          <xsl:choose>
+              <xsl:when test="$lang = 'en'">
+                <xsl:choose>
+                  <xsl:when test="$en_lastname != ''">
+                    <xsl:value-of select="translate($en_lastname, '+', ' ')"/>
+                    <span class="asterisk">*</span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    Last Name  <span class="asterisk">*</span>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:choose>
+                  <xsl:when test="$da_lastname != ''">
+                    <xsl:value-of select="translate($da_lastname, '+', ' ')"/>
+                    <span class="asterisk">*</span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    Efternavn  <span class="asterisk">*</span>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:otherwise>
+            </xsl:choose>
+          
           </label>
           <input type="text" value="" name="LNAME" class="required" id="mce-LNAME" />
         </div>
         <div class="mc-field-group">
-          <label for="mce-MMERGE3">Company </label>
+          <label for="mce-MMERGE3">
+        
+            <xsl:choose>
+              <xsl:when test="$lang = 'en'">
+                <xsl:choose>
+                  <xsl:when test="$en_company != ''">
+                    <xsl:value-of select="translate($en_company, '+', ' ')"/>
+                    <span class="asterisk">*</span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    Company  <span class="asterisk">*</span>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:choose>
+                  <xsl:when test="$da_company != ''">
+                    <xsl:value-of select="translate($da_company, '+', ' ')"/>
+                    <span class="asterisk">*</span>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    Firma  <span class="asterisk">*</span>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:otherwise>
+            </xsl:choose>
+          
+        </label>
           <input type="text" value="" name="MMERGE3" class="" id="mce-MMERGE3" />
         </div>
         <div id="mce-responses" class="clear">
@@ -149,7 +226,17 @@
           <input type="text" name="b_4fe23c6fe1c37c86b0e7689a5_2f4daa5a52" tabindex="-1" value="" />
         </div>
         <div class="clear">
-          <input type="submit" style="" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" onClick = "this.form.action='https://chashude.us17.list-manage.com/subscribe/post?u=4fe23c6fe1c37c86b0e7689a5&amp;id=2f4daa5a52';this.form.submit();" />
+          <xsl:choose>
+            <xsl:when test="$lang = 'en'">
+              <input type="submit" style="" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" onClick = "this.form.action='https://chashude.us17.list-manage.com/subscribe/post?u=4fe23c6fe1c37c86b0e7689a5&amp;id=2f4daa5a52';this.form.submit();" />
+            
+            </xsl:when>
+            <xsl:otherwise>
+              <input type="submit" style="" value="Tilmeld" name="subscribe" id="mc-embedded-subscribe" class="button" onClick = "this.form.action='https://chashude.us17.list-manage.com/subscribe/post?u=4fe23c6fe1c37c86b0e7689a5&amp;id=2f4daa5a52';this.form.submit();" />
+            
+            </xsl:otherwise>          
+          </xsl:choose>
+          
         </div>
       </div>
     </div>
