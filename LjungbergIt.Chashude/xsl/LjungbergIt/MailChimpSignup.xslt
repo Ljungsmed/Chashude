@@ -197,7 +197,7 @@
                     <span class="asterisk">*</span>
                   </xsl:when>
                   <xsl:otherwise>
-                    Company  <span class="asterisk">*</span>
+                    Company
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:when>
@@ -208,7 +208,7 @@
                     <span class="asterisk">*</span>
                   </xsl:when>
                   <xsl:otherwise>
-                    Firma  <span class="asterisk">*</span>
+                    Firma
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:otherwise>
