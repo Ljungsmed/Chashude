@@ -71,22 +71,22 @@
             <xsl:when test="$lang = 'en'">
               <xsl:choose>
                 <xsl:when test="$en_indicatesrequired != ''">
-                  <span class="asterisk">*</span>
+                  <span class="asterisk">* </span>
                   <xsl:value-of select="translate($en_indicatesrequired, '+', ' ')"/>
                 </xsl:when>
                 <xsl:otherwise>
-                  <span class="asterisk">*</span> indicates required
+                  <span class="asterisk">* </span>indicates required
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
               <xsl:choose>
                 <xsl:when test="$da_indicatesrequired != ''">
-                  <span class="asterisk">*</span>
+                  <span class="asterisk">* </span>
                   <xsl:value-of select="translate($da_indicatesrequired, '+', ' ')"/>
                 </xsl:when>
                 <xsl:otherwise>
-                  <span class="asterisk">*</span> betyder obligatorisk
+                  <span class="asterisk">* </span>betyder obligatorisk
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:otherwise>
@@ -101,10 +101,10 @@
                 <xsl:choose>
                   <xsl:when test="$en_email != ''">
                     <xsl:value-of select="translate($en_email, '+', ' ')"/>
-                    <span class="asterisk">*</span>
+                    <span class="asterisk"> *</span>
                   </xsl:when>
                   <xsl:otherwise>
-                    Email  <span class="asterisk">*</span>
+                    Email  <span class="asterisk"> *</span>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:when>
@@ -112,10 +112,10 @@
                 <xsl:choose>
                   <xsl:when test="$da_email != ''">
                     <xsl:value-of select="translate($da_email, '+', ' ')"/>
-                    <span class="asterisk">*</span>
+                    <span class="asterisk"> *</span>
                   </xsl:when>
                   <xsl:otherwise>
-                    Email  <span class="asterisk">*</span>
+                    Email  <span class="asterisk"> *</span>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:otherwise>
@@ -132,10 +132,10 @@
                 <xsl:choose>
                   <xsl:when test="$en_firstname != ''">                    
                     <xsl:value-of select="translate($en_firstname, '+', ' ')"/>
-                    <span class="asterisk">*</span>
+                    <span class="asterisk"> *</span>
                   </xsl:when>
                   <xsl:otherwise>
-                    First Name  <span class="asterisk">*</span>
+                    First Name  <span class="asterisk"> *</span>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:when>
@@ -143,10 +143,10 @@
                 <xsl:choose>
                   <xsl:when test="$da_firstname != ''">
                     <xsl:value-of select="translate($da_firstname, '+', ' ')"/>
-                    <span class="asterisk">*</span>
+                    <span class="asterisk"> *</span>
                   </xsl:when>
                   <xsl:otherwise>
-                    Fornavn  <span class="asterisk">*</span>
+                    Fornavn  <span class="asterisk">* </span>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:otherwise>
@@ -163,10 +163,10 @@
                 <xsl:choose>
                   <xsl:when test="$en_lastname != ''">
                     <xsl:value-of select="translate($en_lastname, '+', ' ')"/>
-                    <span class="asterisk">*</span>
+                    <span class="asterisk"> *</span>
                   </xsl:when>
                   <xsl:otherwise>
-                    Last Name  <span class="asterisk">*</span>
+                    Last Name  <span class="asterisk"> *</span>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:when>
@@ -174,10 +174,10 @@
                 <xsl:choose>
                   <xsl:when test="$da_lastname != ''">
                     <xsl:value-of select="translate($da_lastname, '+', ' ')"/>
-                    <span class="asterisk">*</span>
+                    <span class="asterisk"> *</span>
                   </xsl:when>
                   <xsl:otherwise>
-                    Efternavn  <span class="asterisk">*</span>
+                    Efternavn  <span class="asterisk"> *</span>
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:otherwise>
@@ -193,8 +193,7 @@
               <xsl:when test="$lang = 'en'">
                 <xsl:choose>
                   <xsl:when test="$en_company != ''">
-                    <xsl:value-of select="translate($en_company, '+', ' ')"/>
-                    <span class="asterisk">*</span>
+                    <xsl:value-of select="translate($en_company, '+', ' ')"/>                    
                   </xsl:when>
                   <xsl:otherwise>
                     Company
@@ -205,7 +204,6 @@
                 <xsl:choose>
                   <xsl:when test="$da_company != ''">
                     <xsl:value-of select="translate($da_company, '+', ' ')"/>
-                    <span class="asterisk">*</span>
                   </xsl:when>
                   <xsl:otherwise>
                     Firma
