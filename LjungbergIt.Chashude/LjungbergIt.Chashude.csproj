@@ -80,6 +80,9 @@
     <Compile Include="Xslt\XsltExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Valtech\StandardTemplates\renderings\system\ServiceNavigation.xslt" />
+    <Content Include="Valtech\StandardTemplates\renderings\system\SitemapTable.xslt" />
+    <Content Include="Valtech\StandardTemplates\renderings\system\SitemapTable_Backup20180225.xslt" />
     <Content Include="xsl\LjungbergIt\MailChimpSignup.xslt">
       <SubType>Designer</SubType>
     </Content>
